@@ -41,8 +41,6 @@ If there are elements in the array, logs the string Menu items: [Lunch Item], [L
 If the array is empty, logs the string "The menu is empty." to the console.
 */
 
-** start of script.js **
-
 const lunches = [];
 
 function addLunchToEnd(arr, str){
@@ -102,6 +100,3 @@ function showLunchMenu(arr){
 console.log(lunches);
 getRandomLunch(lunches);
 showLunchMenu(["Greens", "Corns", "Beans"]);
-
-** end of script.js **
-
