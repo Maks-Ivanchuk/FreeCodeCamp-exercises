@@ -12,26 +12,25 @@ You should create a function named findLongestWordLength that takes a string as 
 The function should return the length of the longest word in the string.
 */
 
+function findLongestWordLength(string) {
+  let words = [];
 
-function findLongestWordLength(string){
-
-  let words =[];
-
-  if(string.trim() === "") {
-    return "Порожнє речення"
+  if (string.trim() === "") {
+    return "Порожнє речення";
   } else {
     words = string.trim().split(" ");
   }
 
   let countMaxLength = 0;
 
-  for(const word of words) {
-    if(word.length > countMaxLength){
+  for (const word of words) {
+    if (word.length > countMaxLength) {
       countMaxLength = word.length;
     }
   }
   return countMaxLength;
 }
 
-
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+console.log(
+  findLongestWordLength("The quick brown fox jumped over the lazy dog"),
+);

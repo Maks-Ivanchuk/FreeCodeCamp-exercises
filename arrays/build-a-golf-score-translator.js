@@ -20,27 +20,32 @@ golfScore should return "Double Bogey" if strokes is equal to par plus 2.
 golfScore should return "Go Home!" if strokes is greater than or equal to par plus 3.
 */
 
-const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+const names = [
+  "Hole-in-one!",
+  "Eagle",
+  "Birdie",
+  "Par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home!",
+];
 
-function golfScore(par, strokes){
-  if(strokes == 1){
+function golfScore(par, strokes) {
+  if (strokes == 1) {
     return "Hole-in-one!";
-  } else if(strokes <= par-2){
+  } else if (strokes <= par - 2) {
     return "Eagle";
-  }else if(strokes == par-1){
+  } else if (strokes == par - 1) {
     return "Birdie";
-  } else if(strokes == par){
+  } else if (strokes == par) {
     return "Par";
-  }
-  else if(strokes == par + 1){
+  } else if (strokes == par + 1) {
     return "Bogey";
-  }
-  else if(strokes == par +2 ){
+  } else if (strokes == par + 2) {
     return "Double Bogey";
-  }
-  else if(strokes >= par +3){
+  } else if (strokes >= par + 3) {
     return "Go Home!";
   }
-};
+}
 
 console.log(golfScore(3, 7));

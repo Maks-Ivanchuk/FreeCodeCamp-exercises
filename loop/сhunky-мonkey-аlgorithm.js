@@ -14,17 +14,15 @@ Waiting:5. chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) should return [[0, 1, 2]
 Waiting:6. chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
 Waiting:7. chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].*/
 
-function chunkArrayInGroups(array, arg){
+function chunkArrayInGroups(array, arg) {
   let arr2d = [];
-  const count = array.length/arg;
+  const count = array.length / arg;
 
-      for(let i = 0; i < count; i++) {
-        if(array.length == 0) break;
-        arr2d.push(array.splice(0, arg));
-      }
+  for (let i = 0; i < count; i++) {
+    if (array.length == 0) break;
+    arr2d.push(array.splice(0, arg));
+  }
   return arr2d;
-};
-
-
+}
 
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));

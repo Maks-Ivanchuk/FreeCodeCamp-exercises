@@ -43,18 +43,17 @@ let contacts = [
   },
 ];
 
-function lookUpProfile(name, property){
+function lookUpProfile(name, property) {
+  const contact = contacts.find((contact) => contact.firstName === name);
 
-  const contact = contacts.find(contact => contact.firstName === name);
-
-  if (!contact){
+  if (!contact) {
     return "No such contact";
   }
 
- if(contact.hasOwnProperty(property)) {
+  if (contact.hasOwnProperty(property)) {
     return contact[property];
   } else {
-    return 'No such property';
+    return "No such property";
   }
 }
 

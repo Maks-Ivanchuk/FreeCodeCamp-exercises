@@ -10,16 +10,14 @@ The function should find the missing letter in the passed letter range and retur
 If all letters are present in the range, the function should return undefined.
 */
 
-function fearNotLetter(string){
+function fearNotLetter(string) {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  let startIndex = alphabet.indexOf(string[0]);
 
-  for(let i = 0; i < string.length; i++){
-     if(alphabet[startIndex] != string[i]){
-      return alphabet[startIndex];
-     }
-   startIndex++;
+  for (let i = 0; i < string.length; i++) {
+    if (alphabet[alphabet.indexOf(string[0]) + i] != string[i]) {
+      return alphabet[alphabet.indexOf(string[0]) + i];
+    }
   }
-};
+}
 
 console.log(fearNotLetter("bcdf"));

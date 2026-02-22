@@ -11,15 +11,12 @@ The function should return the string repeated the specified number of times.
 If the number is less than or equal to zero, the function should return an empty string.
 */
 
-function repeatStringNumTimes(string, num){
-
-    let result = '';
-
-    for(let i = 0; i < num; i++){
-      result += string;
-    }
-    return result;
-
+function repeatStringNumTimes(string, num) {
+  let result = "";
+  for (let i = 0; i < num; i++) {
+    result += string;
+  }
+  return result;
 }
 
 console.log(repeatStringNumTimes("*", 100));

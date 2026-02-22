@@ -16,16 +16,15 @@ You should output the value of resultMsg to the console.
 
 let num = 5;
 
-function factorialCalculator(num){
-
+function factorialCalculator(num) {
   let result = 1;
 
-  for(let i = 1; i <= num; i++){
+  for (let i = 1; i <= num; i++) {
     result *= i;
-  };
+  }
 
   return result;
-};
+}
 
 let factorial = factorialCalculator(num);
 let resultMsg = `Factorial of ${num} is ${factorial}`;

@@ -11,40 +11,31 @@ mutation(["hello", "hey"]) should return false because the string hello does not
 mutation(["Alien", "line"]), should return true because all of the letters in line are present in Alien.
  */
 
-
-function mutation(array){
+function mutation(array) {
   let result = [];
 
-  for(let i = 0; i <= array[1].length - 1; i++){
+  for (let i = 0; i <= array[1].length - 1; i++) {
     result.push(array[0].toLowerCase().includes(array[1][i].toLowerCase()));
-  };
+  }
 
   return result.includes(false) ? false : true;
-};
+}
 
 let test1 = ["hello", "Hey"];
 mutation(test1);
 console.log(mutation(test1));
 
-
-
 /* var 2 */
 
-
-function mutation(array){
-
-
-  for(let i = 0; i <= array[1].length - 1; i++){
-    if(!array[0].toLowerCase().includes(array[1][i].toLowerCase())){
+function mutation(array) {
+  for (let i = 0; i <= array[1].length - 1; i++) {
+    if (!array[0].toLowerCase().includes(array[1][i].toLowerCase())) {
       return false;
-    };
-  };
+    }
+  }
 
-  return true
-};
+  return true;
+}
 
 let test2 = ["hello", "Hey"];
 console.log(mutation(test2));
-
-
-
