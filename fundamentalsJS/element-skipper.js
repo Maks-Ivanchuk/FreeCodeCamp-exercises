@@ -27,3 +27,5 @@ console.log(
     return n >= 3;
   }),
 );
+
+//results in [3, 4]

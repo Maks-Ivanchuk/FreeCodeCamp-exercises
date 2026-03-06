@@ -58,3 +58,5 @@ function pyramid(pattern, repeatNum, boolen) {
 console.log(pyramid("p", 5, true));
 let res = pyramid("p", 5, false);
 console.log(JSON.stringify(res));
+
+//results in "\n    p\n   ppp\n  ppppp\n ppppppp\nppppppppp\n"

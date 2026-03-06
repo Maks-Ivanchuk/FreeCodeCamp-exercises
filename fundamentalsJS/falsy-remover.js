@@ -27,3 +27,7 @@ function bouncer(arr) {
 
   return result;
 }
+
+console.log(bouncer([7, "ate", "", false, 9]));
+
+//results in [7, "ate", 9]

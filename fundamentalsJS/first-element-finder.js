@@ -39,3 +39,5 @@ const findElement = (arr, func) => {
 };
 
 */
+
+//results in 8

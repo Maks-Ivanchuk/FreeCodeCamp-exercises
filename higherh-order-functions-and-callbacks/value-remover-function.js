@@ -14,3 +14,7 @@ The function must accept an indeterminate number of arguments.
 function destroyer(arr, ...arg) {
   return arr.filter((el) => !arg.includes(el));
 }
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+//results in [1, 1]

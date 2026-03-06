@@ -29,3 +29,5 @@ function sumAll(arrNum) {
 }
 
 console.log(sumAll([1, 4]));
+
+//results in 10

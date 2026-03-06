@@ -65,3 +65,24 @@ console.log(filteredBooks);
 filteredBooks = filteredBooks.sort(sortByYear);
 
 console.log(filteredBooks);
+
+//results in
+/*
+[
+  {
+    title: 'The Hobbit',
+    authorName: 'J.R.R. Tolkien',
+    releaseYear: 1937
+  },
+  {
+    title: '1984',
+    authorName: 'George Orwell',
+    releaseYear: 1949
+  },
+  {
+    title: 'Pride and Prejudice',
+    authorName: 'Jane Austen',
+    releaseYear: 1813
+  }
+]
+*/

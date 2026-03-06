@@ -99,3 +99,10 @@ function showLunchMenu(arr) {
 console.log(lunches);
 getRandomLunch(lunches);
 showLunchMenu(["Greens", "Corns", "Beans"]);
+
+//results in
+/*
+[]
+No lunches available.
+Menu items: Greens, Corns, Beans
+*/

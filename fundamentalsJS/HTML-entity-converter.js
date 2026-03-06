@@ -38,3 +38,5 @@ function convertHTML(string) {
 }
 
 console.log(convertHTML("Dolce & Gabbana"));
+
+//results in "Dolce &amp; Gabbana"

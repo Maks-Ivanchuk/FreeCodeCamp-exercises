@@ -26,7 +26,7 @@ mutation(test1);
 console.log(mutation(test1));
 
 /* var 2 */
-
+/*
 function mutation(array) {
   for (let i = 0; i <= array[1].length - 1; i++) {
     if (!array[0].toLowerCase().includes(array[1][i].toLowerCase())) {
@@ -39,3 +39,6 @@ function mutation(array) {
 
 let test2 = ["hello", "Hey"];
 console.log(mutation(test2));
+*/
+
+//results in false

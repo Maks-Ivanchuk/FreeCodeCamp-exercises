@@ -21,3 +21,5 @@ function fearNotLetter(string) {
 }
 
 console.log(fearNotLetter("bcdf"));
+
+//results in "e"

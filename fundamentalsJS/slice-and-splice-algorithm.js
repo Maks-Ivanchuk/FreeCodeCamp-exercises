@@ -37,3 +37,5 @@ function frankenSplice(arr1, arr2, index){
 
 frankenSplice([1, 2, 3], [4, 5], 1);
 */
+
+//results in [4, 1, 2, 3, 5]

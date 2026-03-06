@@ -27,3 +27,5 @@ function generatePassword(passLength) {
 const password = generatePassword(6);
 
 console.log(`Generated password: ${password}`);
+
+//results in a random password of 6 characters, for example: "Generated password: aB3$1f"

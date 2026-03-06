@@ -16,55 +16,56 @@ You should have a function named getResults that takes the question object as th
 
 const questions = [
   {
-    category: 'Hobby',
-    question: 'Do you like football?',
-    choices: ['Yes', 'No', 'Maybe'],
-    answer: 'No',
+    category: "Hobby",
+    question: "Do you like football?",
+    choices: ["Yes", "No", "Maybe"],
+    answer: "No",
   },
   {
-    category: 'Favorite Color',
-    question: 'Do you like black?',
-    choices: ['Yes', 'No', 'Maybe'],
-    answer: 'No',
+    category: "Favorite Color",
+    question: "Do you like black?",
+    choices: ["Yes", "No", "Maybe"],
+    answer: "No",
   },
   {
-    category: 'Transport',
-    question: 'Do you like buses?',
-    choices: ['Yes', 'No', 'Maybe'],
-    answer: 'Yes',
+    category: "Transport",
+    question: "Do you like buses?",
+    choices: ["Yes", "No", "Maybe"],
+    answer: "Yes",
   },
   {
-    category: 'Money',
-    question: 'Dollars, hryvnias, or euros?',
-    choices: ['Dollars', 'Euros', 'Hryvnias'],
-    answer: 'Hryvnias',
+    category: "Money",
+    question: "Dollars, hryvnias, or euros?",
+    choices: ["Dollars", "Euros", "Hryvnias"],
+    answer: "Hryvnias",
   },
   {
-    category: 'Bike Type',
-    question: 'What bike do you want?',
-    choices: ['Road', 'Mountain', 'Gravel'],
-    answer: 'Gravel',
-  }
+    category: "Bike Type",
+    question: "What bike do you want?",
+    choices: ["Road", "Mountain", "Gravel"],
+    answer: "Gravel",
+  },
 ];
 
-function getRandomQuestion(array){
- return array[Math.floor(Math.random() * array.length)];
-};
+function getRandomQuestion(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
-function getRandomComputerChoice(choices){
- return choices[Math.floor(Math.random() * choices.length)];
-};
+function getRandomComputerChoice(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
 
-function getResults(objQuestion, objChoice){
-  if(objQuestion.answer == objChoice){
+function getResults(objQuestion, objChoice) {
+  if (objQuestion.answer == objChoice) {
     return `The computer's choice is correct!`;
   } else {
-    return `The computer's choice is wrong. The correct answer is: ${objQuestion.answer}`
+    return `The computer's choice is wrong. The correct answer is: ${objQuestion.answer}`;
   }
-};
+}
 
 let object = getRandomQuestion(questions);
 let choice = getRandomComputerChoice(object.choices);
 
-
 console.log(getResults(object, choice));
+
+//results in either "The computer's choice is correct!" or "The computer's choice is wrong. The correct answer is: <correct-answer>"

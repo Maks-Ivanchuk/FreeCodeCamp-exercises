@@ -30,3 +30,5 @@ let factorial = factorialCalculator(num);
 let resultMsg = `Factorial of ${num} is ${factorial}`;
 
 console.log(resultMsg);
+
+//results in "Factorial of 5 is 120"

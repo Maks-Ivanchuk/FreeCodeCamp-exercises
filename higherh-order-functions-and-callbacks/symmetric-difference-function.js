@@ -30,3 +30,5 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray(["car", "bike", "bus"], ["bike", "train", "plane", "bus"]);
+
+//results in ["car", "train", "plane"]

@@ -24,3 +24,5 @@ function titleCase(str) {
 }
 
 console.log(titleCase("I'm a liltle tea pot"));
+
+//results in "I'm A Liltle Tea Pot"

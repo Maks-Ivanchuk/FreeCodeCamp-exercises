@@ -31,3 +31,5 @@ function getIndexToIns(arr, number) {
 }
 
 console.log(getIndexToIns([3, 10, 5], 11));
+
+//results in 3

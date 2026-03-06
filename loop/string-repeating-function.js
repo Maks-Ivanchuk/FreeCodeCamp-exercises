@@ -20,3 +20,5 @@ function repeatStringNumTimes(string, num) {
 }
 
 console.log(repeatStringNumTimes("*", 100));
+
+//results in 100 asterisks

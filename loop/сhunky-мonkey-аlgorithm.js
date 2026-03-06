@@ -26,3 +26,5 @@ function chunkArrayInGroups(array, arg) {
 }
 
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+
+//results in [[0, 1], [2, 3], [4, 5]]

@@ -38,3 +38,5 @@ function pairElement(string) {
 }
 
 console.log(pairElement("ATCGA"));
+
+//results in [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"], ["A", "T"]]

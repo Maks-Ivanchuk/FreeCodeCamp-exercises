@@ -26,3 +26,5 @@ whatIsInAName(
   ],
   { last: "Capulet" },
 );
+
+//results in [{ first: "Tybalt", last: "Capulet" }]

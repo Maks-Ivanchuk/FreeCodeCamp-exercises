@@ -49,3 +49,5 @@ function golfScore(par, strokes) {
 }
 
 console.log(golfScore(3, 7));
+
+//results in "Go Home!"

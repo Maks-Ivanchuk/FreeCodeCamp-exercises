@@ -22,3 +22,5 @@ function reverseString(str) {
 }
 
 console.log(reverseString("Марія"));
+
+//results in "яірМ"

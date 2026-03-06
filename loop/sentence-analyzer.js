@@ -62,3 +62,8 @@ function getWordCount(sentence) {
 
 const wordCount = getWordCount("I love freeCodeCamp");
 console.log(`Word Count: ${wordCount}`);
+
+//results in Vowel Count: 8
+//Consonant Count: 14
+//Punctuation Count: 12
+//Word Count: 4

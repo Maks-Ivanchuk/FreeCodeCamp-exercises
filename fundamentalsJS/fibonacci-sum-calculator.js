@@ -31,3 +31,5 @@ function sumFibs(number) {
 }
 
 console.log(sumFibs(75024));
+
+//results in 60696

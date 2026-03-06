@@ -58,3 +58,5 @@ function lookUpProfile(name, property) {
 }
 
 console.log(lookUpProfile("Harry", "lastName"));
+
+//results in "Potter"
