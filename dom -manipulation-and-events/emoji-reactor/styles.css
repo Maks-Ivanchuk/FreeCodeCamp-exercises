@@ -43,3 +43,7 @@ li{
 .filled {
     color: red;
 }
+
+span {
+    cursor: pointer;
+}
