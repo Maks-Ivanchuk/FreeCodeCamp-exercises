@@ -33,3 +33,52 @@ function instrumentCards(instrumentCategory) {
 selectContainer.addEventListener("change", () => {
   productsContainer.innerHTML = instrumentCards(selectContainer.value).join(""); // .join("") видаляє коми між елементами масиву, які повертає map
 });
+
+const footballTeam = {
+  team: "FC Barcelona",
+  year: 1899,
+  headCoach: "Xavi Hernandez",
+  players: [
+    { name: "Robert Lewandowski", position: "forward", isCaptain: false },
+    { name: "Pedri", position: "midfielder", isCaptain: false },
+    { name: "Ronald Araujo", position: "defender", isCaptain: false },
+    { name: "Marc-Andre ter Stegen", position: "goalkeeper", isCaptain: true },
+  ],
+};
+
+const team = document.getElementById("team");
+const year = document.getElementById("year");
+const headCoach = document.getElementById("head-coach");
+const playerCards = document.getElementById("player-cards");
+
+team.textContent = footballTeam.team;
+year.textContent = footballTeam.year;
+headCoach.textContent = footballTeam.headCoach;
+
+function playerCard(playerCategory) {
+  if (playerCategory === "all") {
+    footballTeam.players.forEach((player) => {
+      playerCards.innerHTML += `
+        <div class="player-card">
+            <h2>${player.name}</h2>
+            <p>Position: ${player.position}</p>
+          </div>
+      `;
+    });
+  } else {
+    const players = footballTeam.players.filter(
+      ({ position }) => position === playerCategory,
+    );
+    console.log(players);
+
+    players.map(({ name, position }) => {
+      playerCards.innerHTML += `
+        <div class="player-card">
+            <h2>${name}</h2>
+            <p>Position: ${position}</p>
+          </div>
+      `;
+    });
+  }
+}
+playerCard("forward");
