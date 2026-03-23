@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planets Facts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <h2 id="tabs-title">Planets</h2>
+      <div role="tablist" aria-labelledby="tabs-title">
+        <button
+          id="tab-earth"
+          aria-controls="panel-earth"
+          role="tab"
+          aria-selected="true"
+        >
+          🌍 Earth
+        </button>
+        <button
+          id="tab-saturn"
+          aria-controls="panel-saturn"
+          role="tab"
+          aria-selected="false"
+        >
+          🪐 Saturn
+        </button>
+        <button
+          id="tab-mars"
+          aria-controls="panel-mars"
+          role="tab"
+          aria-selected="false"
+        >
+          🔴 Mars
+        </button>
+      </div>
+      <div id="panel-earth" aria-labelledby="tab-earth" role="tabpanel" hidden>
+        <p>
+          Earth is our home planet, known for its abundant water, diverse
+          ecosystems, and life-supporting atmosphere. It's the only planet in
+          the solar system known to harbor life.
+        </p>
+      </div>
+      <div
+        id="panel-saturn"
+        aria-labelledby="tab-saturn"
+        role="tabpanel"
+        hidden
+      >
+        <p>
+          Saturn is famous for its beautiful and extensive ring system made of
+          ice and rock particles. It's a gas giant with dozens of moons orbiting
+          it.
+        </p>
+      </div>
+      <div id="panel-mars" aria-labelledby="tab-mars" role="tabpanel" hidden>
+        <p>
+          Mars, the red planet, is a rocky world with the tallest volcano and
+          deepest canyon in the solar system. It's a key focus for exploration
+          in the search for past or present life.
+        </p>
+      </div>
+    </div>
+
+    <script src="scrypt.js"></script>
+  </body>
+</html>
