@@ -44,3 +44,99 @@ If the manifest object is valid, Validation success: ${containerId} and then the
 If the manifest object is not valid, Validation error: ${containerId} and then the object returned by calling validateManifest() with the manifest object.
 Note: each of these two cases should have two console.log() calls.
 */
+
+const test = {
+  containerId: 0,
+  destination: "Salinas",
+  weight: 10,
+  unit: "lb",
+  hazmat: true,
+};
+function normalizeUnits(manifest) {
+  const copyManifest = { ...manifest };
+
+  if (copyManifest.unit == "lb") {
+    copyManifest.weight = copyManifest.weight * 0.45;
+    copyManifest.unit = "kg";
+    return copyManifest;
+  } else {
+    return copyManifest;
+  }
+}
+
+function validateManifest(manifest) {
+  const copyManifest = { ...manifest };
+  const resultObj = {};
+
+  const compareKeys = [
+    "containerId",
+    "destination",
+    "weight",
+    "unit",
+    "hazmat",
+  ];
+
+  for (let i = 0; i < compareKeys.length; i++) {
+    let key = compareKeys[i];
+
+    if (key in copyManifest) {
+      if (key == "containerId") {
+        if (typeof copyManifest[key] != "number") {
+          resultObj[key] = "Invalid";
+        } else if (copyManifest[key] <= 0) {
+          resultObj[key] = "Invalid";
+        } else if (!Number.isInteger(copyManifest[key])) {
+          resultObj[key] = "Invalid";
+        }
+      } else if (key == "destination") {
+        if (
+          typeof copyManifest[key] == "string" &&
+          copyManifest[key].trim() == ""
+        ) {
+          resultObj[key] = "Invalid";
+        } else if (typeof copyManifest[key] != "string") {
+          resultObj[key] = "Invalid";
+        }
+      } else if (key == "weight") {
+        if (Number.isNaN(copyManifest[key])) {
+          resultObj[key] = "Invalid";
+        } else if (copyManifest[key] <= 0) {
+          resultObj[key] = "Invalid";
+        }
+        //
+      } else if (
+        key == "unit" &&
+        copyManifest[key] != "kg" &&
+        copyManifest[key] != "lb"
+      ) {
+        resultObj[key] = "Invalid";
+      } else if (
+        key == "hazmat" &&
+        copyManifest[key] !== true &&
+        copyManifest[key] !== false
+      ) {
+        resultObj[key] = "Invalid";
+      }
+    } else {
+      resultObj[key] = "Missing";
+    }
+  }
+  return resultObj;
+}
+
+function processManifest(manifest) {
+  const copyManifest = manifest;
+  const valid =
+    Object.keys(validateManifest(copyManifest)).length === 0 ? true : false;
+  let mormalUnits = "";
+
+  if (valid) {
+    mormalUnits = normalizeUnits(copyManifest);
+    console.log(`Validation success: ${mormalUnits["containerId"]}`);
+    console.log(`Total weight: ${mormalUnits["weight"]} kg`);
+  } else {
+    console.log(`Validation error: ${manifest["containerId"]}`);
+    console.log(validateManifest(copyManifest));
+  }
+}
+processManifest(test);
